@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if students %}
+          <h2>Estudiante:</h2>
+          <p>Nombre: {{ students.nom }}</p>
+          <p>Apellido: {{ students.cognom }}</p>
+          <p>Edad: {{ students.edat }}</p>
+      {% endif %}
+
+      {% if teachers %}
+          <h2>Profesor:</h2>
+          <p>Nombre: {{ teachers.nom }}</p>
+          <p>Apellido: {{ teachers.cognom }}</p>
+          <p>Edad: {{ teachers.edat }}</p>
+      {% endif %}
+</body>
+</html>
