@@ -1,24 +1,26 @@
-
-<div style="display='flex'; flex-direction: 'column';">
-
-    <h1>Informació Estudiants</h1>
-
-    <div>
-      <h1>ID</h1>
-      <h1>NOM</h1>
-      <h1>COGNOM</h1>
-      <h1>EDAT</h1>
-      <h1>ROL</h1>
-      <h1>CURS</h1>
-    </div>
-
-    <div>
-      <h1>{{id}}</h1>
-      <h1>{{nom}}</h1>
-      <h1>{{cognom}}</h1>
-      <h1>{{edat}}</h1>
-      <h1>{{rol}}</h1>
-      <h1>{{curs}}</h1>
-    </div>
-
-</div>
+{% extends 'index.html' %}
+{% block content %}
+<h1>Student List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Cognom</th>
+                <th>Edat</th>
+                <th>Curs</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.nom }}</td>
+                <td>{{ student.cognom }}</td>
+                <td>{{ student.edat }}</td>
+                <td>{{ student.curs }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   {% endblock %}
