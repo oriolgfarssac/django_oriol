@@ -1,4 +1,5 @@
 {% extends 'index.html' %}
+
 {% block content %}
 <h1>INFORMACIÓ ALUMNAT TIC BARCELONA (aplicació centre)</h1>
     <table>
@@ -6,9 +7,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nom</th>
-                <th>Cognom</th>
-                <th>Edat</th>
-                <th>Curs</th>
+                <th>Rol</th>
             </tr>
         </thead>
         <tbody>
@@ -16,11 +15,10 @@
             <tr>
                 <td>{{ student.id }}</td>
                 <td>{{ student.nom }}</td>
-                <td>{{ student.cognom }}</td>
-                <td>{{ student.edat }}</td>
-                <td>{{ student.curs }}</td>
+                <td>{{ student.rol }}</td>
+                <td><a href="{% url 'student' pk=student.id %}">+INFO</a></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-   {% endblock %}
+{% endblock %}
