@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Estudiant: {{ student.nom }} {{ student.cognom }}</h1>
+<p>Rol: {{ student.rol }}</p>
+<p>Edat: {{ student.edat }}</p>
+<p>Curs: {{ student.curs }}</p>
+<a href="{% url 'students' %}">Tornar a la llista d'estudiants</a>
+{% endblock %}

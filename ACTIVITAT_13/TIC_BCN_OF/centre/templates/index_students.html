@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>INFORMACIÓ ALUMNAT TIC BARCELONA (aplicació centre)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.nom }}</td>
+                <td>{{ student.rol }}</td>
+                <td><a href="{% url 'student' pk=student.id %}">+INFO</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>INFORMACIÓ PROFESSORS TIC BARCELONA (aplicació centre)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>{{ teacher.id }}</td>
+                <td>{{ teacher.nom }}</td>
+                <td>{{ teacher.rol }}</td>
+                <td><a href="{% url 'teacher' pk=teacher.id %}">+INFO</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
