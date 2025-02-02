@@ -1,5 +1,4 @@
 # django_oriol
-
 No havia afegit el readme, per aixo l'agefeixo ara, les captures estan a un commit més antic si cal comprovar-ho.
 
 Instal·lació de django correcte:

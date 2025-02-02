@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Professor: {{ teacher.nom }} {{ teacher.cognom }}</h1>
+<p>Rol: {{ teacher.rol }}</p>
+<p>Edat: {{ teacher.edat }}</p>
+<p>Especialitat: {{ teacher.especialitat }}</p>
+<a href="{% url 'teachers' %}">Tornar a la llista de professors</a>
+{% endblock %}
