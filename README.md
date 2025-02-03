@@ -12,4 +12,4 @@ Captures de les llistes student i teachers, abans i despres tenint header.
 
 Link video funcionament: https://drive.google.com/file/d/1NNAyFSJn-AU-I4IK9PnUlTk15n1e-OPe/view?usp=sharing
 
-Branch 030225 creada
+Branch 030225 creada 03/02/2025
