@@ -22,3 +22,11 @@ Model creat i migració feta:
 
 ![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-6.png)
 ![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-7.png)
+
+Proves inici de sessió:
+
+Contrasenya incorrecte:
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-8.png)
+
+Inici de sessió correcte:
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-9.png)
