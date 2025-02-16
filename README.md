@@ -11,3 +11,22 @@ Captures de les llistes student i teachers, abans i despres tenint header.
 ![img-4.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-4.png)
 
 Link video funcionament: https://drive.google.com/file/d/1NNAyFSJn-AU-I4IK9PnUlTk15n1e-OPe/view?usp=sharing
+
+Branch 030225 creada 03/02/2025
+
+Crear la nova aplicació (authapp):
+
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-5.png)
+
+Model creat i migració feta:
+
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-6.png)
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-7.png)
+
+Proves inici de sessió:
+
+Contrasenya incorrecte:
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-8.png)
+
+Inici de sessió correcte:
+![img.png](ACTIVITAT_13/TIC_BCN_OF/Img/img-9.png)
