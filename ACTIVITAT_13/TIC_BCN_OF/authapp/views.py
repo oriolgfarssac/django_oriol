@@ -3,23 +3,33 @@ from .forms import LoginForm
 from .models import Usuari
 
 # Login sense sessió
-def login_view(request):
-    form = LoginForm()
-    error_message = ""
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 
-    if request.method == "POST":
+def login_view(request):
+    error_message = None
+
+    if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            usuari = Usuari.objects.filter(email=email).first()
 
-            if usuari:
-                return render(request, 'inici.html', {"usuari": usuari})
-            else:
-                error_message = "Credencials incorrectes."
+            try:
+                usuari = Usuari.objects.get(email=email)
+                if usuari.contrasenya == password:  # Comprovació simple (NO segura)
+                    return render(request, 'home.html', {'usuari': usuari})  # Redirigeix a home
+                else:
+                    error_message = "Contrasenya incorrecta"
+            except Usuari.DoesNotExist:
+                error_message = "Usuari no existent"
 
-    return render(request, 'login.html', {"form": form, "error": error_message})
+    else:
+        form = LoginForm()
+
+    return render(request, 'login.html', {'form': form, 'error': error_message})
+
 
 
 # Login amb sessió
